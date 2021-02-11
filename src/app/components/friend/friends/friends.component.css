@@ -1,0 +1,98 @@
+.mx-auto {
+    margin-top: 100px;
+}
+
+.show-friends {
+    margin-top: 8px;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.show-friends-body{
+    font-size: 13px;
+}
+
+.show-friends-header {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 8px;
+    text-transform: uppercase;
+}
+
+.profession {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: grey;
+    font-weight: 700;
+    margin-left: 8px;
+}
+
+.btn-primary {
+    margin-top: 20px;
+}
+
+.btn-success {
+    margin-top: 20px;
+}
+
+.btn-danger {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.friend-photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.bell-alert {
+    color: grey;
+    font-size: 15px;
+    text-align: center;
+}
+
+.card-text {
+    font-size: 13px;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 400px)  {
+    .card {
+        width: 500px;
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 495px) and (min-width: 300px)  {
+    .show-friends {
+        margin-left: 15px;
+    }
+
+    .mx-auto {
+        margin-top: 40px;
+    }
+
+    .show-friends-header {
+        margin-left: 20px;
+        font-size: 11px;
+    }
+
+    .profession {
+       margin-left: 20px;
+       font-size: 10px;
+    }
+
+    .btn-primary,.btn-success, .btn-danger {
+        margin-top: 15px;
+        font-size: 11px;
+    }
+
+    .friend-photo {
+        width: 60px;
+        height: 60px;
+        border: 2px solid white;
+    }
+}

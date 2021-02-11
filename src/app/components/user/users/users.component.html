@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="col-sm-1"> </div>
+    <div class="col-sm-2">
+        <app-profile></app-profile>
+    </div>
+
+    <div class="col-sm-5">
+        <div class="mx-auto">
+            <div *ngIf="noUsers">
+                <div class="card">
+                    <div class="card-body bell-alert">
+                        <i class="fa fa-bell" aria-hidden="true"></i>
+                        <p class="card-text">Users not available in your network ... </p>
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="isLoading">
+                <div class="d-flex justify-content-center" style="text-align: center;">
+                    <div class="spinner-border text-success" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="!noUsers">
+                <table class="table layout">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">DOB</th>
+                            <th scope="col">City</th>
+                            <th scope="col">Profession</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of users">
+                            <td>{{user.firstName}} {{user.lastName}}</td>
+                            <td>{{user.email}}</td>
+                            <td>{{user.dob}}</td>
+                            <td>{{user.city}}</td>
+                            <td>{{user.profession}}</td>
+                            <td>
+                                <span *ngIf=user.isActive>
+                                    <a (click)="onDisableUserClick(user)">
+                                        <i class="fa fa-toggle-on"></i> Active
+                                    </a>
+                                </span>
+                                <span *ngIf=!user.isActive>
+                                    <a (click)="onEnableUserClick(user)">
+                                        <i class="fa fa-toggle-off"></i> Blocked
+                                    </a>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

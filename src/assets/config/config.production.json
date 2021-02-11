@@ -1,0 +1,11 @@
+{
+    "env": {
+        "name": "production"
+    },
+    "logging": {
+        "console": true
+    },
+    "apiServer": {
+        "baseURL": "https://snp-server-app.herokuapp.com/"
+    }
+}

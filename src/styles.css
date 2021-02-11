@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~ngx-toastr/toastr.css';
+@import '~font-awesome/css/font-awesome.css';
+@import url('https://fonts.googleapis.com/css?family=Passion+One');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+    background-color: whitesmoke;
+    height: 100%;
+    min-height:6em; background-size:cover;
+}
+
+.form-control {
+    font-size: 0.8rem;
+    border-radius: 0px;
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    margin-top: -6px;
+}
+
+.btn-success, .btn-info, .btn-primary, .btn-danger {
+    font-size: 14px;
+    border-radius: 0px;
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+
+.error-message {
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    color: #f44336;
+    font-size: 11px;;
+    padding: 2px 0px;
+}
+
+.container {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.card-title {
+    font-family: 'Passion One', cursive;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.row {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@media (max-width: 765px) {
+    .row {
+        max-width: unset;
+        overflow: unset;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1270px;
+    }
+}

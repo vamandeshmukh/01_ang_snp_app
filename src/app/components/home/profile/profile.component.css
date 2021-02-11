@@ -1,0 +1,90 @@
+.card {
+    height: -webkit-fill-available;
+    position: relative;   
+}
+
+.user-card {
+    height: 500px;
+    margin-top: 100px;
+    border-radius: 10px;
+}
+
+.card-img-top {
+    height: 20%;
+    border-top-left-radius: calc(.5rem - 1px);
+    border-top-right-radius: calc(.5rem - 1px);
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    margin-top: -80px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.user-name {
+    font-family: 'Passion One', cursive;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 18px;
+}
+
+.user-address {
+    text-align: center;
+    font-size: 11px;
+    color: grey;
+    font-weight: 700;
+    margin-top: -15px;
+    text-transform: uppercase;
+}
+
+hr {
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -2px;
+}
+
+.user-info {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 18px;
+    font-size: 12px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+body {
+    background: whitesmoke;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+input {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 400px)  {
+    .card {
+        width: 150px;
+        margin-left: -20px;
+    }
+}
+
+@media only screen and (max-width: 495px) and (min-width: 300px)  {
+    .card {
+        height: 380px;
+        margin-top: 100px;
+        margin-left: 15px;
+    }
+
+    .card-img-top {
+        height: 30%;
+    }
+}
+

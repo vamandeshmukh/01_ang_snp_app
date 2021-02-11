@@ -1,0 +1,146 @@
+.create-post {
+    margin-top: 100px;
+    border-radius: 8px;
+}
+
+.create-post-header {
+    padding: 5px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: gray;
+}
+
+.form-control {
+    border: unset;
+    margin-left: -10px;
+    font-weight: bold;
+}
+
+.show-posts {
+    margin-top: 10px;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.show-posts-body{
+    font-size: 13px;
+}
+
+.show-posts-header {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.btn-success {
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 0px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.custom-icon {
+    color: grey;
+    cursor: pointer;
+}
+
+.likes-count {
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 6px;
+}
+
+.timer {
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.profile-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.post-image {
+    width: 560px;
+    height: 300px;
+}
+
+.post-actionicon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    float: right;
+}
+
+.dropdown-item {
+    padding: .1rem .5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.custom-menu {
+    margin-top: 1rem;
+    min-width: 75%;
+    margin-left: 25%;
+}
+
+.profession {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: grey;
+    font-weight: 700;
+}
+
+.image-upload {
+    display: none;
+    margin-top: 20px;
+}
+
+.camera-position {
+    color: grey;
+    margin-top: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.bell-alert {
+    color: grey;
+    font-size: 15px;
+    text-align: center;
+}
+
+.card-text {
+    font-size: 13px;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 400px)  {
+    .card {
+        width: 500px;
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 495px) and (min-width: 300px)  {
+    .create-post {
+        margin-top: 50px;
+        margin-left: 15px;
+    }
+
+    .show-posts {
+        margin-left: 15px;
+    }
+
+    .show-posts-header, .profession {
+       margin-left: 25px;
+    }
+}

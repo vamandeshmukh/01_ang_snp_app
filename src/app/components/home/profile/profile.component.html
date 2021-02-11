@@ -1,0 +1,27 @@
+<div class="card user-card">
+    <img src="/assets/background.jpg" class="card-img-top" alt="profile background">
+
+    <div class="card-body mx-auto">
+        <div class="mx-auto">
+            <label for="file-input">
+                <div *ngIf="isImageLoaded">
+                    <span *ngIf="isImageAvailable">
+                        <img [src]="imageToShow" alt="Sample image" class="mx-auto d-block img-fluid profile-photo">
+                    </span>
+                    <span *ngIf="!isImageAvailable">
+                        <img src="/assets/user-male.png" class="d-block img-fluid profile-photo" alt="Fallbackimage">
+                    </span>
+                </div>
+            </label>
+            <input type="file" name="picture" id="file-input" (change)="onPhotoSelect($event)" accept="image/*" />
+        </div>
+
+        <p class="user-name">{{activeUserObject.firstName}} {{activeUserObject.lastName}}</p>
+        <p class="user-address">{{activeUserObject.city}}</p>
+        <hr>
+        <div class="user-info">{{noOfConnections}} Connections</div>
+        <hr>
+        <div class="user-info">{{noOfPosts}} Posts</div>
+        <hr>
+    </div>
+</div>

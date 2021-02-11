@@ -1,0 +1,45 @@
+.card {
+    max-width: 800px;
+    height: 600px;
+    margin-top: 100px;
+    border-radius: 8px;
+    max-height:  500px;
+}
+
+.tabs {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    width: 50%;
+    background: dimgrey;
+    color: white;
+    border-radius: 0px;
+    border-color: dimgray;
+    text-align: center;
+}
+
+.nav-link {
+    border-radius: 0px;
+    border-color: dimgray;
+    color: white;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: white;
+    background-color: dimgray;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 400px)  {
+    .card {
+        width: 500px;
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 495px) and (min-width: 300px)  {
+    .card {
+        margin-top: 50px;
+        margin-left: 15px;
+    }
+}

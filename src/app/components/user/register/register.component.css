@@ -1,0 +1,36 @@
+.newform-card {
+    margin-top: 150px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 4px;
+
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.submittedform-card {
+    margin-top: 250px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    color: forestgreen;
+    font-weight: 500;
+}
+
+.fa {
+    font-size: 25px;
+}
+
+hr {
+    border: 0;
+    height: 3px;
+    margin-top: -15px;
+    margin-bottom: 25px;
+    background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,.75),rgba(0,0,0,0));
+}
+
+@media (max-width: 768px) {
+    .newform-card {
+        margin-top: 100px;
+    }
+}

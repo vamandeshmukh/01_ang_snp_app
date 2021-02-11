@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-2">
+        <app-profile></app-profile>
+    </div>
+
+    <div class="col-sm-5">
+        <div class="mx-auto">
+            <div *ngIf="noFriends">
+                <div class="card">
+                    <div class="card-body bell-alert">
+                        <i class="fa fa-bell" aria-hidden="true"></i>
+                        <p class="card-text profession">You do not have any friend yet! Make some friends... </p>
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="isLoading">
+                <div class="d-flex justify-content-center" style="text-align: center; margin-top: 100px">
+                    <div class="spinner-border text-success" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+            </div>
+
+            <div *ngFor="let friend of requestingFriends">
+                <div class="card show-friends">
+                    <div class="card-body">
+                        <div fxLayout="row">
+                            <div fxFlex="15%">
+                                <img [src]="friend.friendIcon" class="mr-auto d-block friend-photo" *ngIf="!isLoading; else noImageFound">
+                                <ng-template #noImageFound>
+                                    <img src="/assets/user-male.png" class="mr-auto d-block img-fluid friend-photo" alt="Fallbackimage">
+                                </ng-template>
+                            </div>
+                            <div fxFlex="35%">
+                                <div class="show-friends-header">{{ friend.firstName }} {{ friend.lastName }} </div>
+                                <div class="profession">UX Developer</div>
+                            </div>
+                            <div fxFlex="50%">
+                                <div *ngIf="friend.isRequest">
+                                    <button type="button" class="btn btn-danger float-right" (click)="onRejectButtonClick(friend)">Reject</button>
+                                    <button type="button" class="btn btn-primary float-right" (click)="onAcceptButtonClick(friend)">Accept</button>
+                                </div>
+                                <div *ngIf="friend.isFriend">
+                                    <button type="button" class="btn btn-success float-right" disabled>You Are Friend</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

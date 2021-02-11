@@ -1,0 +1,60 @@
+<div *ngIf="(isUserLoggedIn | async); then authenticatedUser else guest"></div>
+<ng-template #authenticatedUser>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <span class="navbar-brand">SBOOK</span>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div *ngIf="(isAdmin | async); then admin else user"></div>
+
+      <ng-template #admin>
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a routerLink="/dashboard" class="nav-link">HOME</a></li>
+            <li class="nav-item"><a routerLink="/users" class="nav-link">USERS</a></li>
+            <li class="nav-item"><a routerLink="/network" class="nav-link">NETWORK</a></li>
+            <li class="nav-item"><a routerLink="/friends" class="nav-link">FRIENDS</a></li>
+            <li class="nav-item"><a routerLink="/settings" class="nav-link">SETTINGS</a></li>
+            <span></span>
+            <button type="submit" class="btn btn-outline-primary" (click)="onLogout()"> LOGOUT </button>
+          </ul>
+        </div>
+      </ng-template>
+
+      <ng-template #user>
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a routerLink="/dashboard" class="nav-link">HOME</a></li>
+            <li class="nav-item"><a routerLink="/network" class="nav-link">NETWORK</a></li>
+            <li class="nav-item"><a routerLink="/friends" class="nav-link">FRIENDS</a></li>
+            <li class="nav-item"><a routerLink="/settings" class="nav-link">SETTINGS</a></li>
+            <span></span>
+            <button type="submit" class="btn btn-outline-primary" (click)="onLogout()"> LOGOUT </button>
+          </ul>
+        </div>
+      </ng-template>
+    </div>
+  </nav>
+</ng-template>
+
+<ng-template #guest>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">SBOOK</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="main-menu">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a routerLink="/register" class="nav-link">REGISTER</a></li>
+          <li class="nav-item"><a routerLink="/login" class="nav-link">LOGIN</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</ng-template>
+
+<router-outlet></router-outlet>
